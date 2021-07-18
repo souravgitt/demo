@@ -1,0 +1,98 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
+    font-size: 16px;
+    font-weight: 400;
+    color: #262626;
+}
+
+.pageView ul,
+.pageView ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: disclosure-closed;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.pageView ul li::before {
+    color: red;
+}
+
+.pageView p {
+    margin-bottom: 10px;
+}
+
+.pageView h4 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #78a5d2;
+    font-weight: 500;
+}
+
+.pageView figure,
+.pageView figure + figure {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.pageView figure:first-child {
+    margin-top: 15px;
+}
+
+.pageView p + figure,
+.pageView h4 + figure {
+    margin-top: 40px;
+}
+
+.pageView figcaption {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #3f51b5;
+}
+
+.pageView img {
+    max-width: 100%;
+    height: auto;
+    background-color: #efefef;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0px 1px 6px 0px #ccc;
+}
+
+.pageView table caption {
+    margin-bottom: 15px;
+}
+
+th, td {
+    height: auto !important;
+    padding: 10px !important;
+    font-size: 14px;
+}
+
+.MsoNormal {
+    text-align: center !important;
+}
+
+.HCL-NormalText + .MsoNormal {
+    margin-top: 20px;
+}
+
+.MsoNormal + .MsoNormal + .HCL-NormalText {
+    margin-bottom: 20px;
+}
+
+.MsoNormalTable,
+.MsoTableGrid {
+    width: 100% !important;
+    margin-bottom: 20px;
+}
+
+.MsoNormalTable + p {
+    margin-top: 15px;
+}
+
+table + table {
+    margin-top: 40px;
+}

@@ -1,0 +1,105 @@
+<p>
+    Before providing details about the major players in IIoT space, it would be prudent to consider the key requirements from any IIoT platform and these are listed below (6 key requirements mentioned below are sourced from <a>https://dx-insights.com/2018/09/14/de-mystifying-industrial-iot-iiot-platforms/)</a>:
+</p>
+
+<ul>
+    <li>
+        Device Management: Device Management is needed to configure, provision, monitor and troubleshoot devices remotely and the ones installed in industry.
+    </li>
+    <li>
+        Interfacing with Devices (Southbound Interface): Southbound interfaces are needed for connecting with the end devices/machines. There are many variants, especially in an industrial setting, as there are multitude of protocols (such as, Canbus, Modbus, BACnet, etc.) on top of the lower layer communication protocols (such as, RS-485, RS-422, BLE, Zigbee, Wi-Fi, LoRAWAN etc.). This necessitates the existence of what is known in the industry as Multi-Protocol Gateway (MPG) that can speak these protocols (usually a subset) on the southbound side and a standard protocol like MQTT or AMQP or HTTPS on the northbound side to the Cloud component of an IIOT Platform in most cases.
+    </li>
+    <li>
+        Data Management: Data Management deals with the data from end systems streaming in real time to the Platform. The challenges are with the storage and processing of data in real time. How much to store in memory and how much to store in secondary storage? What kind of data bases to use? How can data accessibility be provided to IT and OT systems as well as to external systems? Flow of data and communication between various entities within the platform would also belong here.
+    </li>
+    <li>
+        Real-time Analytics: Real-time Analytics deals with what is known as Complex Event Processing (CEP), which enables execution of business rules on the streaming data leading to the generation of notification for various events to alert the relevant business stakeholders. Batch analytics is also an integral part of IIOT systems but the statistical model development for machine learning etc. need not be included as part of the IIOT Platform. However, once a statistical or machine learning model is developed, it can be ingested into the IIOT Platform and executed in real time with the streaming data.
+    </li>
+    <li>
+        Interfacing with Enterprise Applications (Northbound Interface): Northbound interfaces are necessary for building various business apps relevant to the industry in question. They help expose the core capability of the IIOT Platform, such as the generation of business insights from real time field data that can be leveraged to make the traditional enterprise applications smarter or more efficient
+    </li>
+    <li>
+        Security: Security has multiple dimensions in the context of IIOT Platforms. First, only authenticated devices are supposed to connect to the platform so that attacks cannot be launched from malicious devices. Second, data in transit as well as data at rest should be encrypted so no data can be compromised. When multiple parties use the same platform, there is also a need for role-based authorization. Privacy also plays an important role from compliance and audit perspective
+    </li>
+</ul>
+
+<p>
+    Almost all the IIoT platforms analyzed by HCL for the current consulting exercise cater to above mentioned table stakes requirements. Another trend observed is that that few industrial customers have replaced or planning to replace MES and related applications, including production maintenance, quality, and inventory management, which are a mix of Information Technology (IT) and Operations Technology (OT) technologies. Manufacturers are relying on IIoT platforms for general process optimization, general dashboards & visualization and condition monitoring.
+</p>
+
+<p>
+    One way to analyze available platforms (450+ IoT platforms exist in market today) is to broadly classify these platforms in two categories:
+</p>
+
+<ul>
+    <li>
+        Generic Platforms (Azure, AWS): The first category consists of platforms which are generic and can cater to multiple use cases and domains. These platforms are quite robust and provide very strong platform building blocks e.g. data ingestion, storage, auto scaling, generic analytics capabilities etc. Notable leaders in this space are Azure and AWS. As these are designed to be broad based, these platforms do not provide any vertical (e.g. smart manufacturing) specific offerings.
+    </li>
+</ul>
+
+<p>
+    One way to analyze available platforms (450+ IoT platforms exist in market today) is to broadly classify these platforms in two categories:
+</p>
+
+<p>
+However, they have very strong foundational platform components and the expectation is that customer should be able to create desired applications using provided components/services. In addition, they also provide blueprints for specific use cases. These generic platforms come bundled with diverse services doesn't mean that they are spread too thin - all the services provided are well tested, scalable and highly available. Robustness of these platforms can be gauged from the fact that most of the vertically aligned platforms (e.g. Thingworx, Mindsphere) are built on top of these generic platforms only.
+</p>
+
+<p>
+Due to their large customer base, these platform players can leverage "Network" benefits of platforms due a greater degree, which can be seen in their ability to provide deep discounts and reduce cost of key components on a periodic basis. Having large customer base also provides them great impetus to resolve issues/bugs in timely fashion. For similar reasons, they can release new features, extend current features at an unimaginable velocity (e.g., AWS has released almost 3 services daily).
+</p>
+ 
+<p>
+The only downside is that customer has perform most of the plumbing work as specialized pre-built components are not available to extent that niche players (second category of verticalized platforms as described below) can provide.
+</p>
+
+<p>
+Another key consideration especially from "smart manufacturing" perspective is the support provided at the edge. Although these platforms started as central platforms (cloud only) but over the years, they have built robust components for "Edge" as well. HCL's view is that their current edge offering's (e.g. Azure IoT edge, AWS Greengrass) are comparable to the edge offerings provided by niche players. Similarly, these platforms do provide robust support for streaming analytics.
+</p>
+
+<p>
+One advantage that customer gets by leveraging these platforms and performing related plumbing work is that one retains the complete control over the data and the applications. This is in contrast with the niche players where there is an inherent dependency due to over dependence on their frameworks, applications and/or algorithms.
+</p>
+
+<p>
+Another point worth mentioning is the fact that although they currently do not have strong IIoT specific offering but going forward that might not be the situation as these vendors have started developing/evolving IIoT specific services (e.g. SiteWise from AWS is specifically targeted towards IIoT) at accelerated pace. In other words, these platforms have mature services for IoT but the services for IIoT are still evolving.
+</p>
+
+<p>
+To summarize, these platforms should be considered keeping in mind their long-term benefits i.e. although initially it may involve some extra effort (for on-boarding specific algorithms/design patterns), but in the long term these drawbacks would be outweighed by benefits like scalability, robustness, customer support etc.
+</p>
+
+<h4>Vertically (manufacturing/industrial in current context) aligned Platforms (Thingworx, Mindsphere):</h4>
+
+<p>
+These platforms are purpose built to solve problems of one particular area and/or domain. E.g., Thingworx and Mindsphere are leaders in this category in the smart manufacturing space.
+</p>
+ 
+<p>
+Main advantage highlighted by these vendors is the industry experience/domain knowledge which they have accumulated over the past 30-40 years which has significant value specially when defining southbound interfaces (connectivity with end devices and sensors) Modbus, Profinet, OPC-UA etc.
+</p>
+ 
+<p>
+These platforms bring ease of application development (with the help of pre-built components, modules, algorithms etc.) both for on premise as well as cloud deployment.
+</p>
+ 
+<p>
+One way of looking at these platforms is that they provide one additional layer of abstraction over the base platforms as defined in category one. E.g., Siemens Mindsphere is built on top of AWS infrastructure.
+</p>
+ 
+<p>
+The sweet spot of these platforms is their ability to provide builder friendly frameworks and development tools. These tools are designed specially to streamline manufacturing and its related design processes. In contrast to earlier mentioned category where generic analytics are provided, candidates in current category focus specifically on manufacturing e.g. OEE, productivity, efficiency, utilization, SPC, predictive maintenance. Since the manufacturing data is inherently complex to analyze, this capability certainly has more weightage than other parameters.
+</p>
+ 
+<p>
+Some of these platforms provide support for developing AR applications tailored for industrial requirements (e.g., Thingworx's Vuforia).
+</p>
+ 
+
+As can be deduced, although there is overlap of functionalities between two categories, these two platforms can be used in complementary fashion also - Thingworx/Mindsphere for industrial domain applications, algorithms and Azure/AWS as a generic IoT platform. Comparison between these categories is summarized below:
+</p>
+
+<figure>
+    <img src="images/img037.jpg" alt="image" />
+    <figcaption>Figure 1 Phases involved in "IIoT Applied Architecture" creation</figcaption>
+</figure>

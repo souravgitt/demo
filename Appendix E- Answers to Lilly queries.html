@@ -1,0 +1,149 @@
+<h4>
+    What is the security, networking mechanism available with PTC? Let us say PTC provides many things but could PTC provide a network security and all sensor /edge management, device provisioning to a good level?
+</h4>
+
+<p>
+    <strong>Answer:</strong> For security and networking support, PTC relies on underlying infrastructure. All the functionalities that are available on the cloud are available on edge as well (deployment flexibility). In other words, fundamentally there is no difference b/w Thingworx running on cloud vis-a-vis the one running on edge. Device provisioning point is answered in question#30
+</p>
+
+<ul>
+    <li>
+        As of connectivity is binary - connected to external n/w (internet) and internal (Lilly) - Is there a way to connect to both?
+    </li>
+</ul>
+
+<p>
+    <strong>Answer:</strong> Refer Section <a href="">#Functional Requirements</a>
+</p>
+
+<h4>How to create a pattern in case someone wants to do a PoC / PoV (i.e. nonproduction workload) (e.g. cellular can be one option) circumventing the security controls</h4>
+
+<p>
+    <strong>Answer:</strong> Refer Figure 14 Data flow from "Proprietary Sensors/ Systems to Enterprise data lake" This would provide a quick and easy method to circumvent the existing security controls, though raising queries on ownership and maintainability of the deployed components. HCL would recommend this option only for those situations where a limited period (2-4 months) PoC is required at the end of which the solution would be re-cast for regular production deployment. With the new networking activities underway, it worthwhile to consider a separate environment or sandbox for Testing & Development, built in the network design. Figure 15 Data flow from "Sensors/ devices to Public cloud" would then also serve to rollout for such PoC / PoV's
+</p>
+
+<h4>Lilly follows "Security first" philosophy, considering this how to easily onboard new sensors</h4>
+
+<p>
+    <strong>Answer:</strong> IIoT world has come up with many smart sensors but the mix of expectations for the type of sensor nodes also considers cost and power requirements. Considering the power and bandwidth constraint of the low-cost sensor nodes, not all kind of robust security practices be ensured on the sensor nodes.
+</p>
+
+<p>
+    Hence recommendation is that security best practices be implemented on the edge gateway as all interaction from internet world or OT side of the networks is recommended to be done through edge gateways. Section <strong>Error! Reference source not found</strong>. on gateway security in collaboration with the device provisioning and security services being provided by cloud platform provides best in class features on gateway security. Refer Figure 15 Data flow from 'Sensors/ devices to Public cloud. Same as Query #3
+</p>
+
+<h4>What are the hardened/ruggedized and carrier-grade choices for secure gateways?</h4>
+
+<p>
+    <strong>Answer:</strong> Section<br>
+    Gateways Recommended Intel and Qualcomm based gateways, which HCL has classified in to 4 different classes of gateways, some of them being used for its customers. The gateways recommendations will take care of the Basic tenants of edge requirement listed in<br>
+    Gateways Recommended.
+</p>
+
+<p>Key KPIs: Lower the maintenance cost, reduce labor and resources to be considered.</p>
+
+<h4><strong>Answer:</strong> Covered in section Appendix D: Mechanism for calculating/reporting Lilly's desired KPI's</h4>
+
+<h4>RFID asset tracking/Supply chain solutions/Measurement of lab chromatography/People tracking are some future use cases to be considered.</h4>
+
+<p><strong>Answer:</strong> Covered in sec# Potential future use-cases</p>
+
+<h4>Business Vs IoT requirements for selecting sensors and devices?</h4>
+
+<p>
+    <strong>Answer:</strong> Appendix A: Sensor Selection Guidelines And Frameworkprovides guidelines and framework for selecting an IIoT sensor.
+</p>
+
+<h4>What is the line between observing and controlling Manufacturing? IT ownership or Manufacturing ownership?</h4>
+
+<p class="unlistHead">Answer: -</p>
+<ul>
+    <li>
+        While the real value of collecting and sharing data is realized only when it is used by someone to take action or make a decision, a practical deployment of digital strategy is to digitalize the trends, analyze the data, predict the possibilities, and even suggest course correction alternatives. In other words, it is crucial to leave the decision making and action initiating responsibilities with humans (Strategy #5 of HCL blog <a href="https://www.hcltech.com/blogs/humane-iiot">https://www.hcltech.com/blogs/humane-iiot</a>) HCL suggests using the insights gained from Manufacturing processes, to supplement the decision making by humans, though use of new-age technologies like ML and big-data.
+    </li>
+    <li>
+        The decision on IT or Manufacturing ownership is contextual to the industry and organizational philosophy. However, the general trend that HCL has seen is to have Manufacturing supported by IT. Any sensor, device or wiring that affects Manufacturing processes, is seen to be owned and managed by Manufacturing. IT tends to be an "internal service provider" managing and supporting the Manufacturing IT infrastructure
+    </li>
+</ul>
+
+<h4>I create a separate VLAN ok, but SSID is visible to staff and can be hacked. Therefore, would u recommend a more secure protocol let us say instead of Wi-Fi to BLE/ZigBee or any other protocol etc.?</h4>
+
+<p>
+    Answer: HCL has recommended wireless-HART as the connectivity protocol best suited for Lilly use cases and other concerns. As compared to other last mile connectivity protocols (mostly based on IEEE802.15.4) HART is more secure. The data link layer in HART incorporates channel hopping and channel blacklisting to increase the reliability and security. Because there is channel hopping, a transmission takes place in one of the channels then the next transmission takes over in another channel at the next time instant. Therefore, because there is channel hopping at different time instance etc., that improves the security and improves the system from being hacked by different intruders or malicious agents. Channel blacklisting is identification of the channels consistently affected by interference and removes them from further use.
+</p>
+
+<h4>We need to talk about using existing licenses on cloud platforms.</h4>
+
+<p>
+    Answer: Most of cloud providers do provide option of BYOL (Bring Your Own License), however this is typically an arrangement between license provider (software vendor) and the cloud user. i.e. in case most of the IaaS offering's, in case software vendor is agreeing to deploy the software on the cloud, cloud public provider doesn't have an issue/concern.
+</p>
+
+<h4>How this integration of cross-cloud arrangement will look like, on the slides as we made.</h4>
+
+<p>
+    <strong>Answer:</strong> Refer Section <a href="">#Functional Requirements</a>
+</p>
+
+<h4>As the exception of getting sensor data to cloud would soon become a norm, we need to know where industry is going, we need a network strategy.</h4>
+
+<p>Answer: Same as Query #3</p>
+
+<h4>What are the issues with GIS if both Azure and AWS need to be maintained?</h4>
+
+<p>Answer: Some of HCL's customers are having multi-cloud strategy and adoption. There are no major challenges from technical standpoint.</p>
+
+<h4>Any vendor offering to integrate vibration data with other parameters/process variables?</h4>
+
+<p>Answer: Not yet. We need to develop the custom code to integrate the vibration and process values together to generate useful insights.</p>
+
+<h4>What other players in HCL experience is doing for high frequency data storage strategy?</h4>
+
+<p>Answer: Refer Section Appendix C: Connectivity Selection Framework</p>
+
+<h4>Wired Vs Wireless for collecting vibration data- the new vendor has wireless solution/petasense has wireless solutions? Or instead of sensors, can we recommend transmitters?</h4>
+
+<p>Answer: Integration of Supply chain sources most often is an Enterprise level activity, where ERP's of both customer and vendor, share data. However, in case of equipment data that needs to be shared with tier-3 suppliers of OEM (e.g. Bosch for AHU), then C2C connectivity as depicted in -Figure 14 Data flow from "Proprietary Sensors/ Systems to Enterprise data lake" with the OEM will need to be deployed.</p>
+
+<h4>Lilly do not want to be stuck with business policies of these COTS customized ML providers binding you to a specific cloud platform or containerization services etc.</h4>
+
+<p>Answer: There are different mechanisms for avoid this trap. One, Lilly can develop algorithms on open source frameworks. Second, frameworks/solutions can be developed which work equally well on cloud as well as on-premise</p>
+
+<h4>Mindsphere to be considered for comparative study on platforms. -</h4>
+
+<p>Answer: Mindsphere was considered for comparative study of IIoT platforms. Refer section IIoT Platform Evaluation and Recommendation</p>
+
+<h4>Decision tree for connectivity choice, like wired vs wireless etc.</h4>
+
+<p>Answer: Has been addressed in section on Appendix C: Connectivity Selection Framework</p>
+
+<h4>Which asset view we should look to, from multiple views (maintenance view, MES view etc.) of device/assets.</h4>
+
+<p>Answer: Asset view provides a birds-eye-view to the task at hand with the added capability to drill-down to manageable component the unit. This unit is different for different tasks. While, the Maintenance task for an equipment would define a physical entity e.g. a cylinder or a pipe as the unit, Control systems like a PLC or an MES would have logical components as units e.g. NO/ NC status of a reed switch on the cylinder. A Process control system like DCS would have a process view while defining the unit e.g. a mixer.</p>
+
+<h4>Does PTC provide device provisioning?</h4>
+
+<p>
+    Ans- The ThingWorx platform provides all the capabilities for device management. Using the provided modeling environment, devices can be modeled as Things with properties, services, events and subscriptions. These Things will communicate with related edge components running out on the actual device, in a device cloud, or gateway talking with the device. These edge components provide functionality for file transfer (bidirectional) and remote software updates. In addition, there are built in status properties on the Thing to let the platform know whether the device is currently connected or not. Customers to enable an application to do all of the device management that is necessary as required by use cases can assemble all of these building blocks
+</p>
+
+<h4>In Industrial domain, are fit for purpose gateways available for vibration analysis?</h4>
+
+<p class="unlistHead">Answer: Yes. There are Vibration analyzers available in the market. For. Ex IFM it provides the</p>
+<ul>
+    <li>Monitoring vibration characteristics in real time with a very fast reaction time up to 1 ms</li>
+    <li>dynamic values within the time range (e.g. v-RMS to ISO)</li>
+    <li>dynamic values within the frequency range FFT or HFFT (e.g. imbalance or rolling element bearing)</li>
+    <li>process values (analogue signals) for current value above or below the limit</li>
+</ul>
+
+<h4>Does PTC have provision to get data from Azure to do analytics directly or data need to be copied to their database?</h4>
+
+<p>
+    Answer: No need to store data in a separate storage. Both streaming and non-streaming data can be consumed. Thingworx provides IoT hub connector specifically for this purpose. The same connector can be used to pull data from other native storage services also e.g. Azure Blob storage. BTW, similar connectors are available for AWS also. In other words, there is no difference for Thingworx for integration with AWS or Azure as connectors are available for both.
+</p>
+
+<h4>HCL to guide Lilly, who all could manage the Gateway deployment and maintenance, as Lilly need to put names for such an accountability.</h4>
+
+<p>
+    Answer: HCL can take the ownership of managing Gateway deployment and maintenance, as being done for other customers.
+</p>

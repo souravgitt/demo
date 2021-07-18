@@ -1,0 +1,35 @@
+<h4>Existing PoCs</h4>
+
+<h4>ACME</h4>
+
+<ul>
+    <li>Improved yield of chemical/biological processes through better optimization using multivariate analysis and modeling.</li>
+    <li>Using R and R-Shiny for unsupervised learning and clustering and classification of golden cycle project. Using RedHat Kubernetes for containerization at present.</li>
+</ul>
+
+<h4>Fegersheim Digital Plant</h4>
+
+ <ul>
+     <li>
+        Phase-I: The intent of this PoC at one of the Lilly sites is to predict time before production unplanned downtimes by monitoring the health of equipment on CGV3 production line without breaking the current production. Process data like Temperature, Vibration (300,000 data points in 10 seconds) etc., are being monitored in real-time, unlike in the past manually through hand-held devices.
+     </li>
+     <li>
+        Lilly here, is using Wireless HART based battery operated devices for collecting data from all 16 vibration sensors to an Emerson HART gateway. The gateway is configurable in the sense, to route specific data to specific Emerson analytical tool i.e. for Machine diagnostics (AMS-MHM) and Device diagnostics (AMS-IDM) respectively. Further, this data is integrated to OSI-PI system.
+     </li>
+     <li>
+        Phase-II: Lilly would define the variables (IoTs, process values) to predict and avoid equipment's breakage based on data collected in Phase I. Also need is to identify and test the best technology that meet Lilly's needs (such as PTC/Python/R technologies).
+     </li>
+ </ul>
+
+<h4>Comments/ Observations -</h4>
+
+<ul>
+    <li>
+        Since IIoT market is flooded with COTS ML models in both R and python languages, it is observed that Lilly should leverage on such best-fit models for its predictive maintenance programs. For that a suitable platform (AWS/Azure/PTC/Mindsphere) alternative need to be recommended by HCL which supports analytics development and integration of all sorts and languages.
+    </li>
+    <li>
+        Lilly knows the engineering aspects of advance predictive analytics like vibration and oil analysis but HCL need to recommend how Lilly could have a faster & cheaper deployment of sensor & systems to collect data (vibration, temperature and many more environment characteristics) and arrive at a ML based analytics models.
+    </li>
+    <li>Lilly need better visualization tool that the current R-shiny</li>
+    <li>Lilly are more interested in AWS tools for containerization</li>
+</ul>

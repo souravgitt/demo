@@ -1,0 +1,19 @@
+<p class="unlistHead">Considering Lilly manufacturing scenario, below are the reason that need to be considered</p>
+
+<ul>
+    <li>
+        To manage network assets, may be internally or outsource, Lilly would prefer a separate infra connected to cloud externally, managed and deployed and updated regularly.
+    </li>
+    <li>
+        Manageability - Lilly wants network isolation from the IT/Manufacturing operations perspective. In addition, Lilly do not want to validate its environment repeatedly due to addition of some more devices inside manufacturing environment. Therefore, we need to have gateways separating the manufacturing infra and IoT infra.
+    </li>
+    <li>
+        Lilly may need to run, for example the vibration analytics based, ML model on edge. So, need gateways with possibility to attach additional hardware for ML Deployments e.g. Intel Movidius or NVIDIA Jetson cards.
+    </li>
+    <li>
+        Security of data and IoT infrastructure- All cloud connectivity protocols may have good network security protocols but ultimately it is the device security which matters most as key management is what if managed properly, give you a high level of confidence. Like root of trust, device provisioning, securing & revoking certificates for transport level security on IP networks. Key generation though analog characteristics by RNG, Secure memory, TPM based processor architecture are necessary to have features while selecting an IoT edge device.
+    </li>
+    <li>
+        Flexibility of data paths, connectivity & data types- Separation of non-GMP data for sandboxing and advance analytics too.
+    </li>
+</ul>

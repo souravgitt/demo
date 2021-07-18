@@ -1,0 +1,192 @@
+<h4>Option 1</h4>
+
+<figure>
+    <img src="images/img031.png" alt="image" />
+    <figcaption>Figure 15: Pattern 4 Alternate Industry Vibration Analysis Architecture</figcaption>
+</figure>
+
+<ul>
+    <li>With reference to the Pattern 4, Vibration accelerometer sensors can connect to the off the shelf vibration monitors like IFM VSE 151 over physical wiring</li>
+    <li>Vibration monitor provides the following
+        <ul>
+            <li>Monitoring vibration values in real time with a very fast reaction time up to 1 ms and calculating dynamic values within the time range (e.g. v-RMS to ISO).</li>
+            <li>Calculating dynamic values within the frequency range FFT or HFFT (e.g. imbalance or rolling element bearing)</li>
+            <li>Process values (analogue signals) for current value above or below the limit</li>
+        </ul>
+    </li>
+    <li>Vibration monitor provides the data over the TCP IP protocol.</li>
+    <li>The IIoT Gateway connects with the Vibration monitor and gets the vibration-processed data.</li>
+    <li>All the processed value, like FFT, Alert details are sent to the enterprise data lake and to public cloud for advanced analytics and visualization purpose.</li>
+    <li>By web service, the enterprise data lake communicates with public cloud.</li>
+    <li>For the effective analytics public cloud needs the other environmental data, like machine temperature, voltage, running condition etc., those can be extracted from the enterprise data lake to the public cloud.</li>
+</ul>
+
+<h4>Option 2</h4>
+
+<figure>
+    <img src="images/img033.png" alt="image" />
+    <figcaption>Figure 16: Pattern 4: Software Vibration Analyzer Based Platform Architecture</figcaption>
+</figure>
+
+<ul>
+    <li>All the Vibration sensor data will be sent to the Vibration analyzer software such as Insight CM.</li>
+    <li>All the raw data processed in the software analyzer (Like Insight CM) centrally and the time domain, frequency domain values data stored in the database buffer.</li>
+    <li>Through the OSI PI connector, all the raw and processed value sent to Enterprise OSI PI.</li>
+    <li>From the Enterprise OSI PI all the processed value, like FFT, Alert details are sent to the Public Cloud for advanced analytics and visualization purpose through the web services.</li>
+    <li>For the effective analytics Platform needs the other environmental data, like machine temperature, voltage, running condition etc., those can be extracted from the enterprise PI connection to the Public Cloud Platform.</li>
+</ul>
+
+<h4>Comparison</h4>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:.05in .05in .05in .05in;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:13.0pt'>
+  <td width="26%" valign=top style='width:26.6%;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;background:#ED7D31;mso-background-themecolor:
+  accent2;padding:.05in .05in .05in .05in;height:13.0pt'>
+  <p class=MsoNormal><b><span lang=EN-GB style='font-size:10.0pt;font-family:
+  "Arial",sans-serif;color:white;mso-themecolor:background1;mso-bidi-font-style:
+  italic'>Criteria<o:p></o:p></span></b></p>
+  </td>
+  <td width="40%" valign=top style='width:40.78%;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#ED7D31;mso-background-themecolor:accent2;
+  padding:.05in .05in .05in .05in;height:13.0pt'>
+  <p class=MsoNormal><b><span lang=EN-GB style='font-size:10.0pt;font-family:
+  "Arial",sans-serif;color:white;mso-themecolor:background1;mso-bidi-font-style:
+  italic'>Option 1 (Recommended)<o:p></o:p></span></b></p>
+  </td>
+  <td width="32%" valign=top style='width:32.62%;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#ED7D31;mso-background-themecolor:accent2;
+  padding:.05in .05in .05in .05in;height:13.0pt'>
+  <p class=MsoNormal><b><span lang=EN-GB style='font-size:10.0pt;font-family:
+  "Arial",sans-serif;color:white;mso-themecolor:background1;mso-bidi-font-style:
+  italic'>Option 2<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:26.0pt'>
+  <td width="26%" valign=top style='width:26.6%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:.05in .05in .05in .05in;height:26.0pt'>
+  <p class=HCL-NormalText align=left style='text-align:left'><span lang=EN-GB>Handling
+  high frequency data<o:p></o:p></span></p>
+  </td>
+  <td width="40%" valign=top style='width:40.78%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:.05in .05in .05in .05in;
+  height:26.0pt'>
+  <p class=HCL-NormalText align=left style='text-align:left'><span lang=EN-GB>Able
+  to handle high frequency sampled data with the hardware<o:p></o:p></span></p>
+  </td>
+  <td width="32%" valign=top style='width:32.62%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:.05in .05in .05in .05in;
+  height:26.0pt'>
+  <p class=HCL-NormalText align=left style='text-align:left'><span lang=EN-GB>Able
+  to handle high frequency sampled data with the hardware<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;height:39.0pt'>
+  <td width="26%" valign=top style='width:26.6%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:.05in .05in .05in .05in;height:39.0pt'>
+  <p class=HCL-NormalText align=left style='text-align:left'><span lang=EN-GB>Processing
+  the data conversion of FFT<o:p></o:p></span></p>
+  </td>
+  <td width="40%" valign=top style='width:40.78%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:.05in .05in .05in .05in;
+  height:39.0pt'>
+  <p class=HCL-NormalText align=left style='text-align:left'><span lang=EN-GB>Happening
+  at the Vibration monitor level. High reliability<o:p></o:p></span></p>
+  </td>
+  <td width="32%" valign=top style='width:32.62%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:.05in .05in .05in .05in;
+  height:39.0pt'>
+  <p class=HCL-NormalText align=left style='text-align:left'><span lang=EN-GB>Happening
+  at the Vibration Analyzer software. Medium reliability<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:26.0pt'>
+  <td width="26%" valign=top style='width:26.6%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:.05in .05in .05in .05in;height:26.0pt'>
+  <p class=HCL-NormalText align=left style='text-align:left'><span lang=EN-GB>Gaining
+  Useful insights<o:p></o:p></span></p>
+  </td>
+  <td width="40%" valign=top style='width:40.78%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:.05in .05in .05in .05in;
+  height:26.0pt'>
+  <p class=HCL-NormalText align=left style='text-align:left'><span lang=EN-GB>Vibration
+  monitor provides standard set the Alerts and Events<o:p></o:p></span></p>
+  </td>
+  <td width="32%" valign=top style='width:32.62%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:.05in .05in .05in .05in;
+  height:26.0pt'>
+  <p class=HCL-NormalText align=left style='text-align:left'><span lang=EN-GB>Vibration
+  monitor software provides the analysis. Rules <span class=GramE>has to</span>
+  be created at software level.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:26.0pt'>
+  <td width="26%" valign=top style='width:26.6%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:.05in .05in .05in .05in;height:26.0pt'>
+  <p class=HCL-NormalText align=left style='text-align:left'><span lang=EN-GB>Configuration<o:p></o:p></span></p>
+  </td>
+  <td width="40%" valign=top style='width:40.78%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:.05in .05in .05in .05in;
+  height:26.0pt'>
+  <p class=HCL-NormalText align=left style='text-align:left'><span lang=EN-GB>One-time
+  configuration and parameter settings <span class=GramE>has to</span> be done
+  by the manufacturer configuration software.<o:p></o:p></span></p>
+  </td>
+  <td width="32%" valign=top style='width:32.62%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:.05in .05in .05in .05in;
+  height:26.0pt'>
+  <p class=HCL-NormalText align=left style='text-align:left'><span lang=EN-GB>All
+  the parameter setting can be done at Software level<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;mso-yfti-lastrow:yes;height:26.0pt'>
+  <td width="26%" valign=top style='width:26.6%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:.05in .05in .05in .05in;height:26.0pt'>
+  <p class=HCL-NormalText align=left style='text-align:left'><span lang=EN-GB>Integration
+  with Public Cloud<o:p></o:p></span></p>
+  </td>
+  <td width="40%" valign=top style='width:40.78%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:.05in .05in .05in .05in;
+  height:26.0pt'>
+  <p class=HCL-NormalText align=left style='text-align:left'><span lang=EN-GB>Easier
+  with Gateway<o:p></o:p></span></p>
+  </td>
+  <td width="32%" valign=top style='width:32.62%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:.05in .05in .05in .05in;
+  height:26.0pt'>
+  <p class=HCL-NormalText align=left style='text-align:left'><span lang=EN-GB>Integration
+  is challenge, as this software provider does not provide seamless connection
+  to public cloud<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>

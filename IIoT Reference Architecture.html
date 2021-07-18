@@ -1,0 +1,130 @@
+<p>
+    The overall architecture is built as a tiered architecture (Edge, Platform and Consumption) where each tier is independently scalable and highly available with following key features:
+</p>
+
+<p class="unlistHead">The platform consists of:</p>
+<ul>
+    <li>The overall IIoT High level architecture is based upon the Lilly Enterprise IoT Reference Architecture (White color-coded) and S95 layered architecture components (colored coded).</li>
+    <li>Each tier consists of multiple closely related components and can augment its functionality by introducing additional components (e.g. API Management that will be interface for visualization)</li>
+    <li>The architecture is adaptable to future requirements of adding/replacing components to a tier, and to new devices or services that are to be introduced in future</li>
+    <li>Each tier is independently secure and data access is restricted to layer components by limiting the data exposure to intended components only.</li>
+    <li>The reference architecture can handle the current and future use cases</li>
+</ul>
+
+<figure>
+    <img src="images/img013.jpg" alt="image" />
+</figure>
+
+<figure>
+    <img src="images/img015.png" alt="image" />
+    <figcaption>Figure 7 IIoT Reference Architecture</figcaption>
+</figure>
+
+<p>The below section is describing each component of reference architecture and its relevance.</p>
+
+<h4>Edge Tier</h4>
+
+<ul>
+    <li><strong>Devices, Edge Gateways</strong> - The devices, Edge Gateways comprises of the physical devices that are connected to the IIoT Platform, which together with Lilly Internal systems and external systems forms the source of data for the Lilly IIoT Platform.</li>
+    <li><strong>Device Management</strong> The device management facilitates the management of devices like provisioning of devices, configuring the devices etc. Device provisioning and Management`.</li>
+    <li><strong>Communication</strong> - This layer serves as the connectivity layer and provides a robust, secure channel to communicate between the various data sources (that comprises of the devices and edge Gateways). It provides abstraction to communication complexities such as encryption, retransmission, data chunking, compression, etc. This layer will provide end to end or host to host communication services such as connection-oriented data stream support, reliability, flow control, secure communication etc. using variety of available protocols like MQTT, AMQP etc. The solution will support different types of data upload scenarios.
+        <ul>
+            <li>Data Analytics on edge</li>
+            <li>Batch upload: Where data is consolidated over a period of time and uploaded to the cloud</li>
+            <li>Bulk Upload: Interface to support upload of log files and other large data into the IoT platform from the site</li>
+        </ul>
+    </li>
+</ul>
+
+<h4>Equipment Control Systems</h4>
+
+<p class="unlistHead">
+    In any manufacturing environment, there are equipment and their control systems are placed at L0 and L1 level of S95. Below is the classification of such equipment and control systems.
+</p>
+<ul>
+    <li><strong>Sensing Elements</strong> - These elements interface directly and physically to the process equipment and machines.</li>
+    <li><strong>Actuators</strong> - Actuation systems convert the input signals computed by the control systems into forms that can be applied to the actual process and would produce the desired variations in the process physical variables.</li>
+    <li>
+        <strong>Control System</strong> - Controllers are essentially elements that accept command signals from human operators or Supervisory Systems, as well as feedback from the process sensors and produce or compute signals that are fed to the actuators.
+    </li>
+</ul>
+
+<h4>Manufacturing operational and Control System</h4>
+
+<p class="unlistHead">
+    These systems are placed in the L2 and L3 layer of S95. These are as follows:
+</p>
+<ul>
+    <li>Supervisory Control (SCADA / DCS)</li>
+    <li>Supervisory control systems perform, typically the following functions, Setpoint computation, Startup / Shut down / Emergency Operations, Control Reconfiguration / Tuning, Operator Interface, Process parameter monitoring.</li>
+    <li>
+        Production Control (MES) - Production control performs at a hierarchically higher level over the supervisory controllers. Typical functions they perform are process scheduling, maintenance management, inventory management, quality management etc.
+    </li>
+</ul>
+
+<h4>Data Collection and Batch Control System</h4>
+<h4>Data Collection</h4>
+
+<p>
+    A Data Historian (also known as a Process Historian or Operational Historian) in Lilly it is OSI PI is a software program that records and retrieves production and process data by time, it stores the information in a time series database that can efficiently store data with minimal disk space and fast retrieval
+</p>
+
+
+<h4>Batch Control System:</h4>
+ 
+<p>
+In the pharmaceutical batch control systems provide complete automation of batch processes including the mixing, blending, and reacting of products such as pharma products.
+</p>
+
+<h4>Platform Tier</h4>
+
+<p>
+    <strong> Ingestion and Integration</strong> - This component facilitates data to be ingested by the devices. It is called message brokers to take care of different sources that will ingest any kind of data including sensor data, device health, and device diagnostic information.
+</p>
+
+<h4>Enterprise Data Lake</h4>
+
+<p>
+    This component offers the storage mechanisms for storing all data ingested into the platform. Broadly, there will be three categories of data: raw data (coming from devices and external systems in its native form), processed data, and notifications (generated by the platform). This component handles device Data, Log Files, Alarms, Events, KPIs and all processed data from the platform. The platform stores large volumes of device data and supports Metadata driven data storage to ensure that data from different devices can be stored in a single data store. Supports capabilities like Isolation, encryption for security requirement. In Lilly storage is handling at the on premise data lake which has Hadoop, IBM Pure Data and Enterprise Pi.
+</p>
+
+<h4>Business planning and Logistics System:</h4>
+ 
+<p>
+    It is the L4 systems in the S95 architecture. It is an integrated system consisting of various entities that work together in order to acquire raw materials, convert these raw materials into specified final products, and deliver these final products to markets. E.g. ERP, SCM etc.
+</p>
+
+<h4>Consumption Tier</h4>
+ 
+<p>
+    Consumption tier is technically for analytics and reporting requirements. For Predictive maintenance
+</p>
+
+<h4>Data Processing</h4>
+ 
+<p>
+    This Layer is also responsible for processing of data (cleaning, enrichment, transformation) of data ingested into the system by devices, enterprise systems. It also comprises of a flexible rules engine for processing incoming data, responding to events and alarms, and triggering actions on the platform. Data will be processed in batch mode in a data sore to do offline/historical analysis for predictive maintenance
+</p>
+
+<h4>Analytics and Reporting</h4>
+ 
+<p>
+    The analytics component of the platform enables to run analytics algorithm to perform Descriptive, Predictive and Prescriptive analysis of the data collected from the equipment. However, the analytics layer of the Lilly IIoT Platform is capable to support Batch Analytics leveraging machine-learning capabilities. The platform will also offer a complete business analytics visualization, including interactive analysis, rich visualizations, executive dashboards, and reporting.
+</p>
+
+<h4>Service Enablement</h4>
+ 
+<p>
+    The reference architecture is flexible in nature and additional functionality in future can be achieved through micro services.
+</p>
+
+<p>
+    <strong>Note</strong>: Consumption from visualization perspective is not the key requirement; however, reference architecture is capable to offer reusable applications. Examples of such applications include device-monitoring dashboards, alerts and notifications, platform monitoring dashboards etc.
+</p>
+
+<h4>Security Considerations</h4>
+ 
+<p>
+    Implement Security at all the layers starting from Device to the applications. For more details, please refer to the topic on <a>End-to-End Security Considerations.</a>
+</p>
+

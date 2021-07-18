@@ -1,0 +1,39 @@
+<h4>HCL Understanding :</h4>
+
+<ul>
+    <li>
+        The ISA-S95 standard, has been interpreted for Lilly Manufacturing Architecture, by stratifying it into network levels. Each application in Lilly has been assigned a level and subsequently a network, within which its data flow is restricted. The existing network levels within the enterprise are as below.
+        <ul>
+            <li>Level 0 - I/O & sensors</li>
+            <li>Level 1 - Equipment control</li>
+            <li>Level 2 - Data collection & Batch control</li>
+            <li>Level 3 - Manufacturing Operations & Control</li>
+            <li>Level 4 (on-premise) and Level 5 (on cloud) - Planning, Logistics and Supporting functions</li>
+        </ul>
+    </li>
+    <li>
+        Lilly has also defined network requirements and standards for each level within this architecture. For example, communication to Level 1 i.e. the automation or the Manufacturing network and below is via dual NIC and from different addresses 40. * and 10. * for both the networks. As a result, if two devices are not within the same "process cell" they cannot communicate, unless there is a dual NIC connecting both or their network layers.
+    </li>
+</ul>
+
+<p>
+    While, this mechanism of network separation has been functional for quite some time, post a recent security audit, Lilly will be implementing an Internal DMZ.
+</p>
+
+<h4>Comments/ Observations :</h4>
+
+<ul>
+    <li>
+        While, separation of networks using NIC's based on process cell definitions, business functions and infrastructure serviceability is good starting point, it may not be the best and secure way, considering the prevalent regulatory requirements, data security considerations and the quick connectivity standups for new use cases, at Lilly. Increasing the flexibility to easily and quickly standup infrastructure to support PoC's within Manufacturing will need to be an important consideration, while implementing new network topologies.
+    </li>
+    <li>
+        HCL suggests having a separate environment or sandbox for Testing & Development to be factored in the network design.
+    </li>
+    <li>
+        In case Lilly so desire, a detailed network study can be done to recommend a practical network architecture identifying the individual network components.
+    </li>
+</ul>
+
+<p>
+    Since, the findings (elaborated in further sections) point to adequateness of existing platforms to address Manufacturing needs, HCL thinks, Lilly should reduce, re-use and reclaim the existing services and components to avoid further heteroginity and diversity at the Platform level. This in turn will ensure adaptability and agility to the varying demands.
+</p>

@@ -1,0 +1,59 @@
+<p>In this section the requirement and details related to edge gateways functional capabilities are highlighted.</p>
+
+<h4>Device registration and configuration</h4>
+
+<p>
+    This section provides an overview of how the Device lifecycle is mapped and managed within the platform. From the time when a Device is manufactured the lifecycle ensures the Device is on boarded to the platform. Post the registration, the Device is provisioned within the platform to enable it to be authenticated and ready to communicate. The provisioning process includes configuring the Device with appropriate policies to be established which are specific to the Device as well as generic Device and country level policies defined for the platform. Post provisioning the Device is activated and starts sending out data as well as receive commands from the central platform.
+</p>
+
+<h4>Device Discovery</h4>
+
+<p>
+    Some Wireless Gateways support a feature known as Device Discovery, which allows capable devices on your network to automatically discover each other's presence and begin sharing data.
+</p>
+
+<p>
+    This feature creates an easier networking setup experience than individually configuring these devices to talk to each other over your Wi-Fi/Bluetooth/ZigBee network. Common uses for device discovery include setting up shared computers or printers on your network.
+</p>
+
+<h4>SNMP Agent</h4>
+
+<p>
+    Simple Network Management Protocol is a communication protocol that lets you monitor managed network devices including Routers, Switches, Servers and other devices that are IP enabled all through a single management system/software. If the networked device is SNMP capable, you can enable and configure it to start collecting information and monitor as many network devices as you want from a single point.
+</p>
+
+<h4>IIoT Agent (Software Cloud Gateway)</h4>
+
+<p>
+    There must be an entity in the Gateway that knows how to contact the IIoT Platform, register with it, send the Gateway sensors data and process any command sent by the IIoT Platform. This is handled by the IIoT agent that is installed on to the Gateway. Based on the device platform the agent can be written in any appropriate programming language and the agent will consume the device management APIs exposed by the IIoT server.
+</p>
+
+<h4>Tunnelling</h4>
+
+<p>
+    Tunneling, also known as "port forwarding," is the transmission of data intended for use only within a private, usually corporate network through a public network in such a way that the routing nodes in the public network are unaware that the transmission is part of a private network. Tunneling is generally done by encapsulating the private network data and protocol information within the public network transmission units so that the private network protocol information appears to the public network as data.
+</p>
+
+<h4>Alert and Notification</h4>
+
+<p>
+    Alerts are typically delivered through a notification system and the most common application of the service is machine-to-person communication. Very basic services provide notification services via email or SMS. More advanced systems provides users with the choice of selecting a preferred delivery channel such as e-mail, Short Message Service (SMS), instant messaging (IM), via voice through voice portals, desktop alerts and more.
+</p>
+
+<h4>Local storage and data processing</h4>
+
+<p>
+    Local storage provides the functionality for storing, retrieving or updating the data in the Gateway. There would be provision to backup/restore the database. This will help to save the configurations and restore whenever gateway/controller needs to replace with another one. This will also have provisions for data filtering, cleaning, pre-processing and aggregation. Logged information should be protected against unauthorized changes and should be accessible to a limited number of people and regularly analyzed.
+</p>
+
+<h4>User Management</h4>
+
+<p>
+    This module maintains the list of configured users and their privileges. Here each gateway user is mapped to a Group and each Group is mapped to set of policies. Each policy contains set of rules or access privileges for services to control, monitor the downstream devices.
+</p>
+
+<h4>Web interface UI</h4>
+
+<p class="text-center">
+    A lightweight embedded web server runs on gateway, which will provide the HTTPS based connection to the web clients or native clients
+</p>

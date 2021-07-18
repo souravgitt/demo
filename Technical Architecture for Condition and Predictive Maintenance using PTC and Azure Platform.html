@@ -1,0 +1,17 @@
+<figure>
+    <img src="images/img019.jpg" alt="image" />
+    <figcaption>Figure 9 Technical Architecture Condition and Predictive Maintenance using PTC and Azure Platform</figcaption>
+</figure>
+
+<p class="unlistHead"><strong>Steps:</strong></p>
+
+<ul>
+    <li>Sensors/devices will be deployed on the manufacturing equipment.</li>
+    <li>Sensors/Devices will be connected through physical layer connectivity protocols like Bluetooth, Wi-Fi, wired etc. to IoT Edge gateway.</li>
+    <li>Edge Gateway has Thingworx edge component installed on. These components include Industrial connectivity tool (Kepware), Thingworx and Edge SDKs(Optional). Thingworx package will be used for things modelling, setting up the rules for anomaly detection, high speed data database (Influx DB) etc. Edge SDKs is optional, it is required when you want to communicate with device using IoT Edge Gateway. Edge will be capable to aggregate and process high speed and low speed data through Thingworx running on it.</li>
+    <li>The raw as well processed data will be ingested into Enterprise data lake (Enterprise pi)</li>
+    <li>Further data from Enterprise Data Lake will be consumed by Azure ML Studio for prediction modeling.</li>
+    <li>The processed data will be sent to Azure IoT Hub from Thingworx in case any anomaly detected</li>
+</ul>
+
+<p class="text-center">IoT Hub will send the event to event-hub and from there Azure Integration, service will send notification to the targeted stakeholders.</p>

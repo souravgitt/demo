@@ -1,0 +1,223 @@
+<figure>
+    <img src="images/img043.png" alt="image" />
+    <figcaption>Figure 24 Connectivity Selection framework</figcaption>
+</figure>
+
+<p>
+HCL decision-making process regarding selection of a connectivity protocol follows the critical evaluation of all the connectivity offerings for IoT, through a well thought & live connectivity selection framework, as depicted above figure. The connectivity selection framework evaluates each connectivity protocol through three core stage gates of executive decision-making.
+</p>
+
+<p>
+<strong>Technical Factors</strong> where focus is more on the robustness, maturity of technology and use case dependency where requirements can be further derived from parameters like minimum-range, power consumption, throughput/Data rate, security & scalability.
+</p>
+
+<p>
+<strong>Deployment Factors</strong> where focus is more on manageability of network setup cost of deployment, managing spectrum (license & unlicensed band) & availability of vendor products.
+</p>
+
+<p class="unlistHead">
+    Considering the above two factors we have used below parameters to evaluate the various short range (Wi-Fi, ZigBee, BLE Smart, HART and ISA100.11a) & long range (LoRaWAN, NBIoT and Private 5G) technologies.
+</p>
+
+<ul>
+    <li>Robustness</li>
+    <li>Range</li>
+    <li>Scalability Support</li>
+    <li>Security</li>
+    <li>Network Manageability</li>
+    <li>Power consumption (can device be Battery Powered)</li>
+    <li>Unlicensed Band</li>
+    <li>Mature Eco Syste</li>
+</ul>
+
+<p>
+    A funnel shaped decision tree has been developed after evaluating all these technologies leads to a conclusion that Lilly should choose from HART or ISA100.11a which is explained in the following table.
+</p>
+
+<h4>IoT Connectivity Decision Funnel</h4>
+
+<figure>
+    <img src="images/img045.png" alt="image" />
+    <figcaption>Figure 25 Connectivity Decision Funnel</figcaption>
+</figure>
+
+<figure>
+    <img src="images/img047.png" alt="image" />
+    <figcaption>Figure 26 Connectivity Decision Matrix</figcaption>
+</figure>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:.05in .05in .05in .05in;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <thead>
+  <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+   <td width="59%" style='width:59.92%;border:solid windowtext 1.0pt;
+   mso-border-alt:solid windowtext .5pt;background:#ED7D31;mso-background-themecolor:
+   accent2;padding:.05in .05in .05in .05in'>
+   <p class=HCL-NormalText align=center style='text-align:center'><b><span
+   lang=EN-GB style='color:white;mso-themecolor:background1'>Connectivity
+   Characteristics<o:p></o:p></span></b></p>
+   </td>
+   <td width="40%" style='width:40.08%;border:solid windowtext 1.0pt;
+   border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+   solid windowtext .5pt;background:#ED7D31;mso-background-themecolor:accent2;
+   padding:.05in .05in .05in .05in'>
+   <p class=HCL-NormalText align=center style='text-align:center'><b><span
+   lang=EN-GB style='color:white;mso-themecolor:background1'>Technology<o:p></o:p></span></b></p>
+   </td>
+  </tr>
+ </thead>
+ <tr style='mso-yfti-irow:1'>
+  <td width="59%" valign=top style='width:59.92%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:.05in .05in .05in .05in'>
+  <p class=HCL-NormalText><b><span lang=EN-GB>Robustness/Interference
+  Resistant:</span></b><span lang=EN-GB> For Any kind of Industrial
+  application, reliable message delivery, authentication &amp; integrity are
+  the key factors. Moreover, the threat of industrial espionage advances the
+  requirement for encryption to hide information that can reveal anything about
+  the production in the plant to competitors. ZigBee type of technologies have
+  been <span class=GramE>lack</span> of robustness. There is no diversity in the frequency and
+  entire network share the static channel which could lead to easy signal
+  jamming. This could also lead to fading because of metal rich environment.
+  Single static channel allocation also increases the chances of interference.<b><o:p></o:p></b></span></p>
+  </td>
+  <td width="40%" valign=top style='width:40.08%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:.05in .05in .05in .05in'>
+  <p class=HCL-NormalText><span lang=EN-GB>BLE, Wi-Fi, ZigBee, Wireless HART
+  &amp; ISA100.11a, LoRaWAN, NBIoT, Private 5G<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width="59%" valign=top style='width:59.92%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:.05in .05in .05in .05in'>
+  <p class=HCL-NormalText><b><span lang=EN-GB>Range and Data rate:</span></b><span
+  lang=EN-GB> Data rate &amp; range is also key consideration. The limitation
+  with BLE &amp; Wi-Fi is <span class=GramE>that,</span> it has limited range
+  of max 100 meter.<o:p></o:p></span></p>
+  </td>
+  <td width="40%" valign=top style='width:40.08%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:.05in .05in .05in .05in'>
+  <p class=HCL-NormalText><span lang=EN-GB>BLE, Wi-Fi, Wireless HART &amp;
+  ISA100.11a, LoRaWAN, NBIoT, Private 5G<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width="59%" valign=top style='width:59.92%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:.05in .05in .05in .05in'>
+  <p class=HCL-NormalText><b><span lang=EN-GB>Scalability Support:</span></b><span
+  lang=EN-GB> All long-range technologies have inherited Scalability Support;
+  however, Wireless HART supports multiple access points per local area. For
+  increased I/O data rates additional access points can be added Also for large
+  plant more than one gateway can be used. ISA100.11a supports one or more backbone routers per local area
+  network. If a local area exceeds the bandwidth of one radio, then additional
+  backbone routers can be added.<o:p></o:p></span></p>
+  </td>
+  <td width="40%" valign=top style='width:40.08%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:.05in .05in .05in .05in'>
+  <p class=HCL-NormalText align=left style='text-align:left'><span lang=EN-GB>Wireless
+  HART &amp; ISA100.11a, LoRaWAN, NBIoT, Private 5G<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width="59%" valign=top style='width:59.92%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:.05in .05in .05in .05in'>
+  <p class=HCL-NormalText><b><span lang=EN-GB>Security:</span></b><span
+  lang=EN-GB> LoRa, NBIoT, Private 5G, Wireless HART &amp; ISA100.11a have a
+  strong security mechanism. NBIoT uses LTE encryption, 5G has various <span
+  class=SpellE>flavor</span> of security inherited from SNOW 3G, AES-CTR, ZUC,
+  HMAC-SHA-256, 5G AKA, EAP, GDPR, ECIES, NESAS. Wireless HART uses Join Keys,
+  Network Key &amp; Session Keys. Session Keys are allocated for <span
+  class=GramE>device to device</span> communication. Join Keys are provisioned
+  by hand handled device. LoRa &amp; ISA100.11a also uses the same framework of
+  keys (Join, session, device).<o:p></o:p></span></p>
+  </td>
+  <td width="40%" valign=top style='width:40.08%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:.05in .05in .05in .05in'>
+  <p class=HCL-NormalText align=left style='text-align:left'><span lang=EN-GB>Wireless
+  HART &amp; ISA100.11a, LoRaWAN, NBIoT, Private 5G<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width="59%" valign=top style='width:59.92%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:.05in .05in .05in .05in'>
+  <p class=HCL-NormalText><b><span lang=EN-GB>Network Manageability:</span></b><span
+  lang=EN-GB> NBIoT services is provided by TSP like T-Mobile, AT&amp;T &amp;
+  Sprint, Private 5G network can be provided by Telecom OEMs like Nokia &amp;
+  Ericson. LoRa can be provided by SENET or Comcast. Wireless HART &amp;
+  ISA100.11a is available in form of End-to-End service.<o:p></o:p></span></p>
+  </td>
+  <td width="40%" valign=top style='width:40.08%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:.05in .05in .05in .05in'>
+  <p class=HCL-NormalText align=left style='text-align:left'><span lang=EN-GB>Wireless
+  HART &amp; ISA100.11a, LoRaWAN, NBIoT<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width="59%" valign=top style='width:59.92%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:.05in .05in .05in .05in'>
+  <p class=HCL-NormalText><b><span lang=EN-GB>Power Consumption:</span></b><span
+  lang=EN-GB> Except 5G, all other technologies support battery operated
+  devices because of low power consumption.<o:p></o:p></span></p>
+  </td>
+  <td width="40%" valign=top style='width:40.08%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:.05in .05in .05in .05in'>
+  <p class=HCL-NormalText align=left style='text-align:left'><span lang=EN-GB>Wireless
+  HART &amp; ISA100.11a, LoRaWAN, NBIoT<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width="59%" valign=top style='width:59.92%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:.05in .05in .05in .05in'>
+  <p class=HCL-NormalText><b><span lang=EN-GB>Unlicensed Spectrum:</span></b><span
+  lang=EN-GB> NBIoT uses license spectrum, however <span class=SpellE>LoRA</span>
+  uses ISM band &amp; Wireless HART &amp; ISA100.11a use 2.4 GHz (unlicensed
+  spectrum).<o:p></o:p></span></p>
+  </td>
+  <td width="40%" valign=top style='width:40.08%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:.05in .05in .05in .05in'>
+  <p class=HCL-NormalText align=left style='text-align:left'><span lang=EN-GB>Wireless
+  HART &amp; ISA100.11a, LoRaWAN<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;mso-yfti-lastrow:yes'>
+  <td width="59%" valign=top style='width:59.92%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:.05in .05in .05in .05in'>
+  <p class=HCL-NormalText><b><span lang=EN-GB>Mature Eco-system:</span></b><span
+  lang=EN-GB> LoRaWAN is comparatively new, however Wireless HART &amp;
+  ISA100.11a are old, specifically designed for industrial application
+  connectivity and backward compatible with old legacy systems too. Emerson,
+  Siemens &amp; ABB are leading players for Wireless HART. Honeywell &amp;
+  Yokogawa provides the support for ISA100.11a. <o:p></o:p></span></p>
+  </td>
+  <td width="40%" valign=top style='width:40.08%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:.05in .05in .05in .05in'>
+  <p class=HCL-NormalText align=left style='text-align:left'><span lang=EN-GB>Wireless
+  HART &amp; ISA100.11a<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>

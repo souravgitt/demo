@@ -1,0 +1,84 @@
+<p>
+HCL was engaged by Lilly MQIT department to provide a practical roadmap for their IIoT journey. As a first step in that direction, HCL was tasked with creating an "Applied Architecture" which can serve as blueprint for realizing currently identified use cases. The proposed architecture should be modular and extensible enough to support additional use cases that would be required later in the journey.
+</p>
+ 
+<p>
+HCL had complete flexibility to propose a robust architecture with requirement that it should align well with other ongoing initiatives within Lilly (e.g. Enterprise data backbone, Da Vinci, Data Analytics reference Architecture etc.) as well adhere to defined Lilly's enterprise and Infosec guidelines. As the name "Applied Architecture" implies, the proposed architecture should be immediately implementable and should gel well with the existing infrastructure consisting of data historians (like OSI PI), existing automation systems etc.
+</p>
+
+ 
+<p>
+This exercise of creating "Applied Architecture" was done in three phases where first phase mainly consisted of preparation (or prework) phase wherein Lilly provided documentation was studied at offshore (around 1 week). Second phase (of two weeks) was understanding of Lilly's "As Is" operating scenario as well as Lilly's expectation of "To Be" state. During this phase, key stakeholders from Lilly side were interviewed and meeting minutes captured. The said meeting minutes and corresponding session recordings were the key inputs that was utilized.at arriving at the final architecture.
+</p>
+ 
+<p>
+The third phase had main activities as consolidation of received inputs, iterations for architecture refinement, validations from both HCL and Lilly's key stakeholders and creation of final document (current document). The three phases mentioned is shown below:
+</p>
+
+<figure>
+    <img src="images/img001.png" alt="image" />
+    <figcaption>Figure 1 Phases involved in "IIoT Applied Architecture" creation</figcaption>
+</figure>
+
+<p>
+    As mentioned in earlier figure, one of the key activities performed in this project was that of IIoT platform evaluation and recommendation. Lilly had asked HCL to recommend a platform which provide generic IIoT platform capabilities and at the same time caters to Lilly specific needs e.g.
+</p>
+
+<ul>
+    <li>Condition monitoring and Predictive analytics capabilities</li>
+    <li>Leveraging Enterprise OSI PI historian</li>
+    <li>Mandate to use AWS at enterprise level</li>
+    <li>De-prioritised requirements of OTA upgrades, real-time analytics and creation of Manufacturing dashboards</li>
+    <li>Capabilities to quickly develop use-cases and/or PoC's</li>
+    <li>Device Management capabilities</li>
+</ul>
+
+<p>
+    Accordingly, HCL did extensive analysis (as detailed in IIoT Platform Evaluation and Recommendation and comparison of the existing platforms (AWS, Azure, PTC ThingWorx, Mindsphere) on multiple parameters and with due consideration to the weightages attached to these .parameters by Lilly, HCL recommends a combination of Thingworx (strong on edge side) and Azure (strong in cloud side) considering Lilly's current technology comfort level and investments. This would also align well with hybrid multi-cloud strategy as outlined by Lilly's enterprise group. However, as AWS overall score closely matches that of Azure and also looking at Lilly specific needs, AWS is equally good contender.
+</p>
+
+In doing so, Lilly would be able to leverage the on-premise strengths offered by Manufacturing vertical aligned platforms (Thingworx etc.) and the analytical model building capabilities from generic cloud platforms (e.g. Azure, AWS).This approach will ensure Lilly has access to best-of-both-worlds features for their current requirements while at the same time laying the strong foundation for future use cases,
+</p>
+ 
+<p>
+HCL understands that Lilly's current operating environment is quite restrictive due to strict compliance requirements of GMP and network security constraints(firewalls, restrictions on movement of amber/Red data). Additionally, most of the data is being processed on-premise with some baby steps being taken towards public cloud adoption. Sensification is limited to capturing vibration data and is currently fed into OSI PI historian. Additionally, third party tools (like IBM Maximo, SAP) are integrated with other on-premise Data Lake for generating work orders.
+</p>
+ 
+<p>
+Main scope of this exercise is to enable condition monitoring and provide accurate data driven predictive maintenance schedules. Lilly is not currently looking at actuating the decisions on the shop floor in an automatic fashion for the foreseeable future. In other words, IoT'ization would be used for collating data from sensors and wherever control is needed, there would always be a human in the loop who would be triggering required actions.
+</p>
+ 
+<p>
+Another expectation from the current initiative is to produce a viable architecture that can produce actionable insights by breaking the "data silos". The architecture should sustain the currently identified use cases as well as potential future use cases. In other words, key objective is to reap benefits of IIoT in Lilly's facilities without losing sight of typical brownfield constraints.
+</p>
+ 
+<p>
+Lilly's existing enterprise IoT reference architecture provides strong foundation for realizing diverse use cases and is a base of the proposed applied architecture.
+</p>
+ 
+<p>
+During HCL's interactions, Lilly informed of their plans to work with GIS team in developing VLAN solutions for patterns in which devices connect to level 3 and level 4. These in HCL's opinion are legitimate options and Lilly needs to pursue these as enablers.
+</p>
+ 
+<p>
+As four data-flow patterns emerge out of the known use-cases, HCL recommends to have the vibration data flow from sensor to Edge-gateway to Enterprise data lake to Cloud. Pattern 4, explained in section#6.1.4, which elucidates the recommended approach to any IIoT deployment involving non-GMP data. This is future-ready for intelligence at edge and also addresses other criteria for device management and data security. This is based on HCL's observations and experience in other industries, where the vibration data is FFT analysed near the source and processed data is further used for prediction modelling and analysis. HCL recommends HART or ISA100.11a as last mile connectivity protocols.
+</p>
+
+<p>
+    HCL can be a valuable partner to Lilly for realizing IIoT vision. Some of the potential areas of collaboration are listed below:
+</p>
+
+<ul>
+    <li>Porting of existing proprietary ML algorithms (e.g. Applied Reliability algorithms) to open platforms (e.g. Azure, AWS) and/or standard frameworks.</li>
+    <li>Support and maintenance of edge devices (gateways, routers, sensors).</li>
+    <li>Realization of proposed "Applied Architecture" and related use cases</li>
+</ul>
+
+<p>
+Lilly's vision is to have connected sites where data can be aggregated and analyzed in cloud but at the same time solution should have flexibility of analyzing data at edge (site level) also. In other words, inter-connected and IIoT'ized sites will enable Lilly to realize very strong use case in future. Depending upon on use case specific requirement, it can either be implmented at edge or cloud or a combination of both. The architecture proposed in the current document is first step in realizing that vision. The said vision is shown pictorially on the next page.
+</p>
+
+<figure>
+    <img src="images/img003.png" alt="image" />
+    <figcaption>Figure 2: Lilly's IIoT vision</figcaption>
+</figure>

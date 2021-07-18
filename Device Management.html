@@ -1,0 +1,36 @@
+<figure>
+    <img src="images/img021.jpg" alt="image" />
+    <figcaption>Figure 10: Device Management</figcaption>
+</figure>
+
+<h4>Edge Gateway Provisioning with IoT Hub</h4>
+
+<ul>
+    <li>Operator adds the Gateway registration information to the enrollment list in the Azure portal.</li>
+    <li>Gateway contacts the provisioning service endpoint set at the plant. The Gateway passes the identifying information to the provisioning service to prove its identity.</li>
+    <li>The provisioning service validates the identity of the Gateway by validating the registration ID and key against the enrollment list entry using standard X.509 verification (X.509).</li>
+    <li>The provisioning service registers the Gateway with an IoT hub and populates the Gateway's desired twin state.</li>
+    <li>The IoT hub returns Gateway ID information to the provisioning service.</li>
+    <li>The provisioning service returns the IoT hub connection information to the Gateway. The Gateway can now start sending data directly to the IoT hub.</li>
+    <li>The Gateway connects to IoT hub.</li>
+    <li>The Gateway gets the desired state from its Gateway twin in IoT hub</li>
+</ul>
+
+<h4>Edge Gateway (Thingworx Edge) Communication with Thingworx Foundation</h4>
+
+<p>To connect Kepware to Thingworx Server you need to provide the following details in the Kepware Project Properties</p>
+
+<ul>
+    <li>Host: It will be the hostname of your Thingworx Foundation</li>
+    <li>Port: Port at which Thingworx is running</li>
+    <li>Application Key: Search for Application Key in Thingworx Composer for the thing specified in Project Properties</li>
+</ul>
+
+<h4>Edge SDK communication with Thingworx Foundation and end sensors</h4>
+
+<p>The ThingWorx Edge SDKs are collections of classes, objects, functions, methods, and variables that provide a framework to develop middleware applications. These middleware applications can send data securely from edge devices to the Thingworx Foundation. Edge SDKs provides tools for programming languages in C, .NET, Java, Android, and iOS.</p>
+
+<ul>
+    <li>Create application key in the Thingworx Foundation</li>
+    <li>Use this Key in the program which will be created by using Edge SDK at the gateway level.</li>
+</ul>

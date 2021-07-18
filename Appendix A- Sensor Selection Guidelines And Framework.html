@@ -1,0 +1,83 @@
+<p>
+    The section lists key considerations for selecting an IIoT sensor that are relevant for Smart Manufacturing use cases. Selecting an IIoT sensor can be a challenging endeavor since in addition to general considerations of accuracy, repeatability etc. that are applicable in any sensor selection, there are certain unique IIoT related aspects that needs to be covered e.g. battery characteristics, connectivity protocol etc.
+</p>
+
+<p class="unlistHead">Generally, sensor selection starts with shop floor managers deciding on</p>
+
+<ul>
+    <li>What data to collect?</li>
+    <li>Who will get the information derived from the data?</li>
+    <li>How this information will be used so that the right decisions are made?</li>
+    <li>What changes deserve attention or require a reaction?</li>
+    <li>What decisions do sensor data influence?</li>
+    <li>What value can be derived from these decisions</li>
+</ul>
+
+<p>
+    Smart factories equipped with location tracking sensors can determine the precise positions of work-in-progress, tools and other production-relevant items within the facility. By tracking these items, and watching for interactions between them, the factory can monitor both the current state of the production process and can identify when aspects of the process must be changed. Sensors are implemented into statistical process control to make accurate, consistent, and reliable measurements of the various process parameters.
+</p>
+
+<h4>Key considerations for Sensor Selection</h4>
+
+<p>
+In addition to basic sensor characteristics like range, cost, ease of use/maintenance, resolution etc., there are certain other factors that need to be considered while selecting a sensor. In general, it is advisable to take a system level approach when selecting a sensor and avoid choosing it in isolation.
+</p>
+ 
+<p>
+One practical approach of finalizing relies on first shortlisting the sensors based on key functional requirements (i.e. accuracy, resolution etc.) and then make a final selection based on factors like the size, extent of signal conditioning, reliability, robustness, maintainability, and cost. Some of non-obvious factors to be considered while selecting a sensor are listed below:
+</p>
+
+<ul>
+    <li>
+        Accuracy & Precision:  Accuracy has to do with how close the sensor reading is to the true value while Precision refers to the ability of the sensor to detect small changes. Both the accuracy and precision of a given sensor system must be appropriate for the requirements of the system. Very high precision can give a false impression that the reading is also accurate or can result in the system detecting noise rather than the actual desired data. A sensor with more accuracy than necessary will be more expensive and more difficult to use properly than one more appropriate to the measurement required. Additionally, both accuracy and precision are affected by errors incurred throughout the system. Transducer error, wiring, signal conditioners, and the gauges or converters used to read the value each add their own errors into the system that must be understood in order to select the appropriate sensors.
+    </li>
+    <li>
+        Type of Sensor: A specific property can be measured by using different type of sensors. E.g. presence of an object can be detected by using image/vision cameras as well as with proximity sensors.
+    </li>
+    <li>
+        Environment: Selection of the proper sensor requires a good understanding of the environment in which the instrument will be operated. Many sensors can be affected by the non-ideal conditions of a production floor (such as temperature variation, vibration, humidity, chemicals, etc.) It is important to take the environment into account when selecting the sensor and its packaging, mounting, and other options. e.g. Sensors having following IP rating can provide required protection from specific environmental conditions:
+        <ul>
+            <li>IP65: Protection from live or moving parts, dust, and protection from water jets from any direction.</li>
+            <li>IP67: Protection from live or moving parts, dust, and protection from immersion in water.</li>
+            <li>IP68: Protection from live or moving parts, dust, and protection from submersion</li>
+        </ul>
+    </li>
+    <li>
+        Excitation: Many sensors require power to produce an output signal and it is important to provide a power source that will not introduce additional errors. Similarly, there are certain sensors that are self-powered. Related consideration is whether the sensor would be battery powered or mains powered.
+    </li>
+    <li>
+        Signal Conditioning: The actual (non-ideal realties) working conditions also need to be considered. E.g. electrical noise is present on production floors and can cause erroneous readings. Signal conditioners and other protection circuits can provide some protection from these effects before conversion. Sometimes these are useful, but other times it is possible or preferred to process the signals after conversion, so the use of conditioners must be evaluated as part of sensor selection process.
+    </li>
+    <li>
+        Conversion: In IIoT context, it is often preferred that sensing system provide digital data rather than data in analog form. Hence, analog to digital converters must be evaluated and matched appropriately to the sensors or errors can be introduced, or money wasted by overpaying for precision in one that is not present in the other.
+    </li>
+    <li>
+        Sensor Connectivity: The connectivity requirements of different types of IIoT networks vary widely, depending on their purpose and resource constraints. A range of different wireless and wired technologies can be used to provide full IIoT connectivity. IIoT sensors communicate using a range of different communication protocols, which may include short-range radio protocols (such as ZigBee, Bluetooth and Wi-Fi); mobile networks; or longer-range radio protocols (such as LoRa). The factory environment is sometimes extremely challenging for the radio and optical tracking systems typically used in other industries - electromagnetic signals are reflected and obstructed by the copious amounts of metal in factories. However, new radio technologies like ultra-wideband (UWB) radio allow centimeter-level real-time positioning even within the harsh factory environment.
+    </li>
+    <li>
+        Physical characteristics like size, weight etc.: Although intention is to select a smallest/lightest sensor but other factors like cost, dimension of the object (thing) being sensed/measured also need to be balanced out.
+    </li>
+    <li>
+        Response Time: This considers how fast the sensor would response to an issued command. E.g. if a microprocessor is programmed to get information from a pressure sensor every 5 minute, but it takes the pressure sensor 2 hours to respond, obviously this would not be a good sensor.
+    </li>
+    <li>
+        Bandwidth Requirements: In case sensor can send the readings directly to the backend server (i.e. without the presence of a data aggregator/data filtering device like gateway between sensor and backend server), bandwidth becomes an important consideration. In addition, bandwidth is directly proportional to the level of precision as supported by sensor. A sensor that can better compress or reduce the transmitted data may have a huge impact on the reduction of wireless data usage and connectivity costs.
+    </li>
+    <li>
+        Cost Effectiveness: IIoT systems dramatically benefit from localized data collection. The more granular the data localization, the better business decisions can be. Therefore, it is imperative for the IIoT sensor devices to be cost effective to enable widespread deployments and to be able to reduce the overall business costs. Due to this desire for larger unit volume deployments, connected sensor devices need to be as low cost as possible.
+    </li>
+    <li>
+        Power Consumption efficiency: Many, if not most, of the IIoT sensor device deployments are in difficult to access locations without any power grid access, and, thus, are battery operated. This makes replacement of depleted batteries a major cost factor. While the batteries themselves may not be very expensive, labor to access and replace them can be very high, negatively affecting operating expenses. Therefore, power consumption efficiency is one of key factor considered. In general, the more computationally powerful the embedded hardware, the more power it will consume. So, choose the right hardware for a given task. E.g., running Linux-based software to make a simple sensor reading with a powerful processor will usually take significantly more energy than doing the same readings with a power-optimized microcontroller with no Operating System (OS).
+    </li>
+</ul>
+
+<h4>Framework for selecting an optimum sensor is shown below:</h4>
+
+<figure>
+    <img src="images/img041.jpg" alt="image" />
+    <figcaption>Figure 20 Sensor Selection Framework</figcaption>
+</figure>
+
+
+
+

@@ -1,0 +1,65 @@
+<p>
+    Following are the data security requirements that has been considered or to be considered in Lilly requirements:
+</p>
+
+<h4>Device Registration</h4>
+
+<p>Refer the section <a>#Device Management</a></p>
+
+<h4>Data Security, privacy and protection</h4>
+<ul>
+    <li>
+        <strong>Database security and Compliance</strong> - Data encryption at rest is a mandatory step toward data privacy and compliance. Data is managing in Lilly at the enterprise data lake level; hence follow the following best practices for data at rest.
+        <ul>
+            <li>Database user Management
+                <ul>
+                    <li>Allows granular control with a username/password</li>
+                    <li>Full Fledged Password Policy</li>
+                </ul>
+            </li>
+            <li>Database Encryption with commercial certification like NIST to address "data in rest" directives
+                <ul>
+                    <li>Cryptographic operations using dedicated Hardware Security Module (HSM). HSM (Hardware Security Module) are dedicated systems that physically and logically secure the cryptographic keys and cryptographic processing that are at the heart of any digital signature and data protection solution.</li>
+                </ul>
+            </li>
+            <li>Table, Column and Row Level Access Control</li>
+            <li>No Data Redaction Capabilities</li>
+            <li>Audit-
+                <ul>
+                    <li>Use Inbuilt Auditing (Server, Database Level and Audit Level)</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<h4>Enforce Secure Network Architecture</h4>
+
+<ul>
+    <li>A secure network to be define that denies traffic by default and allows by exception.</li>
+    <li>All communication happens over SSH (Secured Shell) Tunnels.
+        <ul>
+            <li>Inbuilt Protection against top 10 web attacks - Injection, XSS, Broken Authentication, Broken Session Management, Insecure Direct Object Reference, XSRF, Security Misconfiguration, Insecure Cryptographic Storage, Failure to restrict URL Access, Insufficient Transport Layer Protection, Invalidated Redirects and Forwards</li>
+        </ul>
+    </li>
+</ul>
+
+<h4>Auditing and Logging will support logging of the following</h4>
+
+<ul>
+    <li>Security Logging</li>
+    <li>Login, Logout, Failed Logins, Password Changes</li>
+    <li>Log Information shall contain:
+        <ul>
+            <li>User Id, Time Stamp and IP mandatorily.</li>
+            <li>Request Id and Session Id when available</li>
+            <li>Log changes to password policy.</li>
+            <li>Entity level Logging (Created By, Create Time, Edited By, Edit Time)</li>
+            <li>File based Logs for code (ERROR/INFO/WARN/DEBUG levels)</li>
+        </ul>
+    </li>
+</ul>
+
+<p class="text-center">
+    History - Track Create/Update/Delete of specific entities
+</p>
